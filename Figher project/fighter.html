@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Fighters</title>
+ </head>
+
+ <body>
+   <h1> What is your figther?</h1>
+   <p class ="fourofthem">Fighters: Alex  Matt  Dani  George  Dom</p>
+
+   <div class="stats-container">
+     <div id=stats></div>
+   </div>
+
+   <input id="userInput"> <br> <br>
+   <button onclick="myFighter()" > Common click </button>
+   <h1 id="message"> </h1>
+
+<style>
+    body{
+      background-color: black; 
+      text-align: center; color:mediumseagreen;
+    }
+    button{
+      background-color:grey; 
+      font-size:15px; 
+      color:white; ;
+    }
+    .stats{
+      color: white;
+      border: 2px solid greenyellow;
+      width: 240px ;
+      padding: 15px;
+  
+    }
+    .fourofthem{
+      color: greenyellow
+    }
+    .stats img {
+      width: 200px;
+     
+    }
+    .stats-container{
+      display: flex;
+      justify-content: center;
+    }
+    
+    
+</style>
+  <script>
+    const alex = {
+      name: 'Alex K',
+      height: 190,
+    }
+    function myFighter() {
+      let userINput = document.querySelector("#userInput");
+      let message = document.querySelector("#message");
+      let fighter = document.querySelector("#userInput").value
+
+      if (fighter == "Alex") {
+        console.log("Tall")
+        document.querySelector("#stats").innerHTML =
+        `
+          <div class='stats'>
+          <img src='https://mail.google.com/mail/u/0?ui=2&ik=81ed9cef34&attid=0.1&permmsgid=msg-a:r8927323567961200464&th=18bb3f23d165d966&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9ZiuyHwBPgCxWWeoPlzbFJXT5pc1DRJk8OvbVqy_XbSUwwCG7enc6T2y2wO9FS4Ty_rDM9lNB3Uk5AytuTfjB43-GbkIk3w-eTPw1aaNsqX14IPyMrSkq09-s&disp=emb&realattid=18bb3f2149e98d8f4871'>
+          <br>
+          <hi>Fighter: ${alex.name}</hi>
+          <p>Style: Karate</p>
+          <p>Record: 49:1:0</p>
+          <p>Height: 188cm</p>
+          <p>Weight: 75kg<?p></div>
+        `
+          
+      }else if (fighter == "Dani") {
+        console.log("Short") 
+        document.querySelector("#stats").innerHTML =
+        "<div class='stats'><img src='https://mail.google.com/mail/u/0?ui=2&ik=81ed9cef34&attid=0.1&permmsgid=msg-f:1781912384641745346&th=18ba9fdf7370c1c2&view=att&disp=safe'><br><hi>Fighter: Dani</hi><p>Style: Box</p><p>Record: 49:1:0</p><p>Height: 175cm</p><p>Weight: 72kg<?p</div>"
+
+      }else if (fighter == "Dom") {
+        console.log("NPC")
+        document.querySelector("#stats").innerHTML =
+        "<div class ='stats'><img src='https://mail.google.com/mail/u/0?ui=2&ik=81ed9cef34&attid=0.3&permmsgid=msg-f:1782091783669929488&th=18bb43090ac9d610&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8C9JssCkvVOBfruteO5V0Dcu-dm2QuMBJSOa5sTrhJIYn2n_-cz5XFxy1rujWVPBH8MdnrSLkvUGIhlwTodepvZRGj1Vr1hbnlCo6ZYOOkev4psfkF6KFezkk&disp=emb&realattid=18bb42fb2b86b75c32b3'><br><hi>Fighter: Dom</hi><p>Style: Aikido</p><p>Record: 96:5:30</p><p>Height: 184cm</p><p>Weight: 76kg<?p></div>"
+
+      }else if (fighter == "Matt") {
+        console.log("Skinny") 
+        document.querySelector("#stats").innerHTML =
+        "<div class ='stats'><img src='https://mail.google.com/mail/u/0?ui=2&ik=81ed9cef34&attid=0.2&permmsgid=msg-f:1782091783669929488&th=18bb43090ac9d610&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ-ZONhqd8elm0IG25tukNCmqoS4wmbJMB6ly8VMU1-Z9-H7oRp4QuToTVp5rsbXaaxZZ1L8V_ORJ8zYuonYl558l7O6xrT1M4HA3obNs0NaIcCetThKiQ8ZaNI&disp=emb&realattid=18bb42f8201207cf5f01'><br><hi>Fighter: Matt</hi><p>Style: Pasifist</p><p>Record: 0:0:0</p><p>Height: 180cm</p><p>Weight: 15kg<?p></div>"
+
+      }else if (fighter == "George") {
+        console.log("Average")
+        document.querySelector("#stats").innerHTML =
+        "<div class ='stats'><img src='https://mail.google.com/mail/u/0?ui=2&ik=81ed9cef34&attid=0.1&permmsgid=msg-a:r5194557989699297349&th=18ba98854abae8e2&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_gL0qB1ZFSmZRuzHCOvPzldYInpw1vvTJl8gkmhLV6gLbQuoTGonnpM-411aSRvND2KTunO9U4sBRx6Tz4IvkdrV46Esqlymnwtw2MJndtbGBFZWNDBTsUZJs&disp=emb&realattid=18ba9884384696bf271'><br><hi>Fighter: George</hi><p>Style: Kung fu</p><p>Record: 2:0:0</p><p>Height: 180cm</p><p>Weight: 80kg<?p></div>"
+      }
+    }
+          
+
+
+       
+      
+  </script>
+
+</body>
